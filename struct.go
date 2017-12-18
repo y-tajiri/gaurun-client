@@ -1,6 +1,6 @@
 package gaurun
 
-import "github.com/mercari/gaurun/gaurun"
+import "go.mercari.io/mercari/gaurun/gaurun"
 
 const (
 	// PlatformAndroid is enum for FCM/GCM.
@@ -26,9 +26,10 @@ type (
 	}
 	// An AndroidSetting has setting fields for FCM/GCM.
 	AndroidSetting struct {
-		CollapseKey    string `json:"collapse_key,omitempty"`
-		DelayWhileIdle bool   `json:"delay_while_idle,omitempty"`
-		TimeToLive     int    `json:"time_to_live,omitempty"`
+		CollapseKey    string    `json:"collapse_key,omitempty"`
+		DelayWhileIdle bool      `json:"delay_while_idle,omitempty"`
+		TimeToLive     int       `json:"time_to_live,omitempty"`
+		Notification   []*Extend `json:"notification,omitempty"`
 	}
 	// An IOSSetting has setting fields for APNs.
 	IOSSetting struct {
